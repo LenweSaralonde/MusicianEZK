@@ -1,0 +1,17 @@
+## Interface: 40400
+## Title: Musician EZK
+## Author: LenweSaralonde
+## Notes: Perform live music in Musician using simplified keyboard
+## Version: 0.1.0
+## RequiredDeps: Musician
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: MusicianEZK_Storage
+
+core\MusicianEZK.lua
+
+constants\MusicianEZK.Constants.lua
+
+locale\locale.xml
+
+ui\MusicianEZKKeyboard.xml

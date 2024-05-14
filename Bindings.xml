@@ -1,0 +1,7 @@
+<Bindings>
+	<Binding name="MUSICIANEZKTOGGLE" category="ADDONS">
+		if MusicianEZK.IsInitialized() then
+			MusicianEZKKeyboard:Toggle()
+		end
+	</Binding>
+</Bindings>

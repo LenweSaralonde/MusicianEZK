@@ -1,0 +1,17 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.blizzard.com/wow/ui/">
+	<!-- Base localization -->
+	<Script file="MusicianEZK.base.lua" />
+	<Script file="MusicianEZK.en.lua" />
+	<!-- Additional localization -->
+	<Script file="MusicianEZK.es.lua" />
+	<Script file="MusicianEZK.fr.lua" />
+	<Script file="MusicianEZK.pt.lua" />
+	<Script file="MusicianEZK.de.lua" />
+	<Script file="MusicianEZK.it.lua" />
+	<Script file="MusicianEZK.ru.lua" />
+	<Script file="MusicianEZK.ko.lua" />
+	<Script file="MusicianEZK.zh.lua" />
+	<Script file="MusicianEZK.tw.lua" />
+</Ui>

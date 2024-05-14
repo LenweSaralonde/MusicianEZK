@@ -1,0 +1,129 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.blizzard.com/wow/ui/">
+
+	<Script file="MusicianEZKKeyboard.lua" />
+
+	<!-- Main frame -->
+
+	<Frame name="MusicianEZKKeyboard" inherits="MusicianDialogTemplate" enableKeyboard="true" propagateKeyboardInput="false">
+
+		<Size x="640" y="208" />
+
+		<!-- Main title -->
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentTitle" inherits="GameFontNormalLarge">
+					<Anchors>
+						<Anchor point="CENTER" relativePoint="TOP" x="0" y="-32" />
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+
+			<!-- Virtual keyboard -->
+
+			<Frame name="$parentEZKeys" parentKey="ezKeys">
+				<Size x="600" y="80" />
+				<Anchors>
+					<Anchor point="BOTTOM" y="20" />
+				</Anchors>
+			</Frame>
+			<Frame name="$parentEZKeysGlow" parentKey="ezKeysGlow">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentEZKeys" />
+					<Anchor point="TOPLEFT" relativeTo="$parentEZKeys" />
+				</Anchors>
+			</Frame>
+
+			<!-- Mode selector -->
+
+			<Frame name="$parentMode" parentKey="modeDropdown" inherits="MusicianDropDownMenuTooltipTemplate">
+				<Anchors>
+					<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="$parentEZKeys" />
+					<Anchor point="LEFT" x="5" />
+				</Anchors>
+			</Frame>
+
+			<!-- Octave selector -->
+
+			<Frame name="$parentOctave" parentKey="octaveDropdown" inherits="MusicianDropDownMenuTooltipTemplate">
+			<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentMode" x="-25" />
+				</Anchors>
+			</Frame>
+
+			<!-- Transpose selector -->
+
+			<Frame name="$parentTranspose" parentKey="transposeDropdown" inherits="MusicianDropDownMenuTooltipTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentOctave" x="-25" />
+				</Anchors>
+			</Frame>
+
+			<!--Instrument selector -->
+
+			<Frame name="$parentInstrument" parentKey="instrumentDropdown" inherits="MusicianInstrumentDropdownTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentTranspose" x="-25" />
+				</Anchors>
+			</Frame>
+
+			<!-- Live play button -->
+
+			<Button name="$parentLiveModeButton" inherits="MusicianLiveModeButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-20" y="-20" />
+				</Anchors>
+			</Button>
+
+			<!-- Band sync play button -->
+
+			<Button name="$parentBandSyncButton" inherits="MusicianBandLivePlayButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" x="20" y="-20" />
+				</Anchors>
+			</Button>
+
+		</Frames>
+
+		<Layers>
+			<Layer level="OVERLAY">
+
+				<!-- Instrument label -->
+
+				<FontString name="$parentInstrumentLabel" parentKey="instrumentLabel" inherits="GameFontHighlight" justifyh="LEFT">
+					<Size x="250" y="32" />
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentInstrument" x="20" />
+					</Anchors>
+				</FontString>
+
+				<!-- Transpose label -->
+
+				<FontString name="$parentTransposeLabel" parentKey="transposeLabel" inherits="GameFontHighlight" justifyh="LEFT">
+					<Size x="250" y="32" />
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentTranspose" x="20" />
+					</Anchors>
+				</FontString>
+
+				<!-- Octave label -->
+
+				<FontString name="$parentOctaveLabel" parentKey="octaveLabel" inherits="GameFontHighlight" justifyh="LEFT">
+					<Size x="250" y="32" />
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentOctave" x="20" />
+					</Anchors>
+				</FontString>
+
+			</Layer>
+		</Layers>
+
+		<Scripts>
+			<OnLoad inherit="append" function="MusicianEZKKeyboard_OnLoad" />
+		</Scripts>
+	</Frame>
+</Ui>
