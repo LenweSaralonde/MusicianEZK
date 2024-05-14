@@ -89,7 +89,7 @@ local function setKeys()
 			button.background:SetColorTexture(1, 0, 0, 1)
 			button:Enable()
 			button:SetAlpha(1)
-			button.subText:SetText(keyIndex == 0 and MusicianEZK.Msg.OCTAVE_UP or MusicianEZK.Msg.OCTAVE_DOWN)
+			button.subText:SetText(keyIndex == 10 and MusicianEZK.Msg.OCTAVE_UP or MusicianEZK.Msg.OCTAVE_DOWN)
 		end
 	end
 end
