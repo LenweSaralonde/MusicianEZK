@@ -101,6 +101,15 @@
 					</Anchors>
 				</FontString>
 
+				<!-- Mode label -->
+
+				<FontString name="$parentModeLabel" parentKey="modeLabel" inherits="GameFontHighlight" justifyh="LEFT">
+					<Size x="250" y="32" />
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentMode" x="20" />
+					</Anchors>
+				</FontString>
+
 				<!-- Transpose label -->
 
 				<FontString name="$parentTransposeLabel" parentKey="transposeLabel" inherits="GameFontHighlight" justifyh="LEFT">

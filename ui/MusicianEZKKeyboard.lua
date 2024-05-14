@@ -281,11 +281,11 @@ function MusicianEZK.Keyboard.Init()
 	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardInstrument, 165)
 
 	-- Mode selector
-	MusicianEZKKeyboard.instrumentLabel:SetText(Musician.Msg.HEADER_MODE)
+	MusicianEZKKeyboard.modeLabel:SetText(MusicianEZK.Msg.HEADER_MODE)
 	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardMode, 100)
 
 	-- Octave selector
-	MusicianEZKKeyboard.octaveLabel:SetText(Musician.Msg.HEADER_OCTAVE)
+	MusicianEZKKeyboard.octaveLabel:SetText(MusicianEZK.Msg.HEADER_OCTAVE)
 	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardOctave, 40)
 
 	-- Transpose selector
