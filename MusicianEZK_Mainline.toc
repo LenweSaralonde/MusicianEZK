@@ -1,4 +1,4 @@
-## Interface: 110100
+## Interface: 110105
 ## Title: Musician EZK
 ## Author: LenweSaralonde
 ## Notes: Perform live music in Musician using simplified keyboard
