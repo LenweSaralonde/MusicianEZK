@@ -1,5 +1,5 @@
 <Bindings>
-	<Binding name="MUSICIANEZKTOGGLE" category="ADDONS">
+	<Binding name="MUSICIANEZKTOGGLE" category="BINDING_CATEGORY_MUSICIAN">
 		if MusicianEZK.IsInitialized() then
 			MusicianEZKKeyboard:Toggle()
 		end
