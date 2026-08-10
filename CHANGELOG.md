@@ -1,21 +1,25 @@
 Changelog
 =========
 
+v0.4.0
+------
+* Updated for WoW Retail 12.1.0.
+
 v0.3.4
 ------
-* Updated for Wow Classic Era 1.15.9 and WoW TBC Classic 2.5.6.
+* Updated for WoW Classic Era 1.15.9 and WoW TBC Classic 2.5.6.
 
 v0.3.3
 ------
-* Updated for Wow Retail 12.0.7 and MoP Classic 5.5.4.
+* Updated for WoW Retail 12.0.7 and MoP Classic 5.5.4.
 
 v0.3.2
 ------
-* TOC bump for Wow Retail 12.0.5.
+* TOC bump for WoW Retail 12.0.5.
 
 v0.3.1
 ------
-* TOC bump for Wow Retail 12.0.1.
+* TOC bump for WoW Retail 12.0.1.
 
 v0.3.0
 ------
