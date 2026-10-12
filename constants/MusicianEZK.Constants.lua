@@ -1,4 +1,4 @@
-MusicianEZK.MUSICIAN_API_VERSION = 27
+MusicianEZK.MUSICIAN_API_VERSION = 28
 
 MusicianEZK.KEYS = {
 	'1',
