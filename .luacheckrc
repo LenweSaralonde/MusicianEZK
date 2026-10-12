@@ -32,13 +32,6 @@ read_globals = {
 	-- Libraries
 	"LibStub",
 
-	"MSA_DropDownMenu_SetText",
-	"MSA_DropDownMenu_CreateInfo",
-	"MSA_DropDownMenu_AddButton",
-	"MSA_DropDownMenu_Initialize",
-	"MSA_DropDownMenu_EnableDropDown",
-	"MSA_DropDownMenu_DisableDropDown",
-	"MSA_DropDownMenu_SetWidth",
 
 	-- 3rd party add-ons
 }

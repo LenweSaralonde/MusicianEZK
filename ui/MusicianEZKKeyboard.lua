@@ -126,29 +126,21 @@ local function initControls()
 		modeSelector.index = index
 		local modeKey = modes[index]
 		Musician.Live.AllNotesOff(Musician.KEYBOARD_LAYER.UPPER)
-		MSA_DropDownMenu_SetText(modeSelector, Musician.Msg.KEYBOARD_LAYOUTS[modeKey])
+		modeSelector:OverrideText(Musician.Msg.KEYBOARD_LAYOUTS[modeKey])
 		mode = modeKey
 		setKeys()
 	end
 
-	modeSelector.OnClick = function(self, arg1)
-		modeSelector.SetValue(arg1)
+	local isModeSelected = function(index)
+		return modeSelector.index == index
 	end
 
-	modeSelector.GetItems = function()
-		local info = MSA_DropDownMenu_CreateInfo()
-		info.func = modeSelector.OnClick
-
+	modeSelector:SetupMenu(function(_, rootDescription)
 		for index, modeKey in pairs(modes) do
 			local label = Musician.Msg.KEYBOARD_LAYOUTS[modeKey]
-			info.text = label
-			info.arg1 = modeKey
-			info.checked = modeSelector.index == index
-			MSA_DropDownMenu_AddButton(info)
+			rootDescription:CreateRadio(label, isModeSelected, modeSelector.SetIndex, index)
 		end
-	end
-
-	MSA_DropDownMenu_Initialize(modeSelector, modeSelector.GetItems)
+	end)
 	modeSelector.SetValue(mode)
 
 	-- Octave selector
@@ -163,27 +155,19 @@ local function initControls()
 		octaveSelector.index = index
 		Musician.Live.AllNotesOff(Musician.KEYBOARD_LAYER.UPPER)
 		octave = 8 - index
-		MSA_DropDownMenu_SetText(octaveSelector, octaveValues[index])
+		octaveSelector:OverrideText(octaveValues[index])
 		setKeys()
 	end
 
-	octaveSelector.OnClick = function(self, arg1)
-		octaveSelector.SetIndex(arg1)
+	local isOctaveSelected = function(index)
+		return octaveSelector.index == index
 	end
 
-	octaveSelector.GetItems = function()
-		local info = MSA_DropDownMenu_CreateInfo()
-		info.func = octaveSelector.OnClick
-
+	octaveSelector:SetupMenu(function(_, rootDescription)
 		for index, label in pairs(octaveValues) do
-			info.text = label
-			info.arg1 = index
-			info.checked = octaveSelector.index == index
-			MSA_DropDownMenu_AddButton(info)
+			rootDescription:CreateRadio(label, isOctaveSelected, octaveSelector.SetIndex, index)
 		end
-	end
-
-	MSA_DropDownMenu_Initialize(octaveSelector, octaveSelector.GetItems)
+	end)
 	octaveSelector.SetValue(octave)
 
 	-- Transpose selector
@@ -197,28 +181,20 @@ local function initControls()
 		transposeSelector.index = index
 		Musician.Live.AllNotesOff(Musician.KEYBOARD_LAYER.UPPER)
 		transpose = index
-		MSA_DropDownMenu_SetText(transposeSelector, Musician.NOTE_NAMES[index])
+		transposeSelector:OverrideText(Musician.NOTE_NAMES[index])
 		setKeys()
 	end
 
-	transposeSelector.OnClick = function(self, arg1)
-		transposeSelector.SetIndex(arg1)
+	local isTransposeSelected = function(index)
+		return transposeSelector.index == index
 	end
 
-	transposeSelector.GetItems = function()
-		local info = MSA_DropDownMenu_CreateInfo()
-		info.func = transposeSelector.OnClick
-
+	transposeSelector:SetupMenu(function(_, rootDescription)
 		for index = 0, 11, 1 do
-			local label = Musician.NOTE_NAMES[index]
-			info.text = label
-			info.arg1 = index
-			info.checked = transposeSelector.index == index
-			MSA_DropDownMenu_AddButton(info)
+			rootDescription:CreateRadio(Musician.NOTE_NAMES[index], isTransposeSelected, transposeSelector.SetIndex,
+				index)
 		end
-	end
-
-	MSA_DropDownMenu_Initialize(transposeSelector, transposeSelector.GetItems)
+	end)
 	transposeSelector.SetValue(transpose)
 end
 
@@ -278,19 +254,19 @@ function MusicianEZK.Keyboard.Init()
 
 	-- Instrument selector
 	MusicianEZKKeyboard.instrumentLabel:SetText(Musician.Msg.HEADER_INSTRUMENT)
-	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardInstrument, 165)
+	MusicianEZKKeyboardInstrument:SetWidth(183)
 
 	-- Mode selector
 	MusicianEZKKeyboard.modeLabel:SetText(MusicianEZK.Msg.HEADER_MODE)
-	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardMode, 100)
+	MusicianEZKKeyboardMode:SetWidth(118)
 
 	-- Octave selector
 	MusicianEZKKeyboard.octaveLabel:SetText(MusicianEZK.Msg.HEADER_OCTAVE)
-	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardOctave, 40)
+	MusicianEZKKeyboardOctave:SetWidth(58)
 
 	-- Transpose selector
 	MusicianEZKKeyboard.transposeLabel:SetText(MusicianEZK.Msg.HEADER_TRANSPOSE)
-	MSA_DropDownMenu_SetWidth(MusicianEZKKeyboardTranspose, 48)
+	MusicianEZKKeyboardTranspose:SetWidth(66)
 
 	-- Init virtual keyboard
 	initKeyboard()

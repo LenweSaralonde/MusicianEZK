@@ -40,36 +40,36 @@
 
 			<!-- Mode selector -->
 
-			<Frame name="$parentMode" parentKey="modeDropdown" inherits="MusicianDropDownMenuTooltipTemplate">
+			<DropdownButton name="$parentMode" parentKey="modeDropdown" inherits="MusicianDropdownTemplate">
 				<Anchors>
-					<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="$parentEZKeys" />
-					<Anchor point="LEFT" x="5" />
+					<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="$parentEZKeys" y="5" />
+					<Anchor point="LEFT" x="22" />
 				</Anchors>
-			</Frame>
+			</DropdownButton>
 
 			<!-- Octave selector -->
 
-			<Frame name="$parentOctave" parentKey="octaveDropdown" inherits="MusicianDropDownMenuTooltipTemplate">
-			<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentMode" x="-25" />
+			<DropdownButton name="$parentOctave" parentKey="octaveDropdown" inherits="MusicianDropdownTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentMode" x="9" />
 				</Anchors>
-			</Frame>
+			</DropdownButton>
 
 			<!-- Transpose selector -->
 
-			<Frame name="$parentTranspose" parentKey="transposeDropdown" inherits="MusicianDropDownMenuTooltipTemplate">
+			<DropdownButton name="$parentTranspose" parentKey="transposeDropdown" inherits="MusicianDropdownTemplate">
 				<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentOctave" x="-25" />
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentOctave" x="9" />
 				</Anchors>
-			</Frame>
+			</DropdownButton>
 
 			<!--Instrument selector -->
 
-			<Frame name="$parentInstrument" parentKey="instrumentDropdown" inherits="MusicianInstrumentDropdownTemplate">
+			<DropdownButton name="$parentInstrument" parentKey="instrumentDropdown" inherits="MusicianInstrumentDropdownTemplate">
 				<Anchors>
-					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentTranspose" x="-25" />
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentTranspose" x="9" />
 				</Anchors>
-			</Frame>
+			</DropdownButton>
 
 			<!-- Live play button -->
 
@@ -97,7 +97,7 @@
 				<FontString name="$parentInstrumentLabel" parentKey="instrumentLabel" inherits="GameFontHighlight" justifyh="LEFT">
 					<Size x="250" y="32" />
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentInstrument" x="20" />
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentInstrument" />
 					</Anchors>
 				</FontString>
 
@@ -106,7 +106,7 @@
 				<FontString name="$parentModeLabel" parentKey="modeLabel" inherits="GameFontHighlight" justifyh="LEFT">
 					<Size x="250" y="32" />
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentMode" x="20" />
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentMode" />
 					</Anchors>
 				</FontString>
 
@@ -115,7 +115,7 @@
 				<FontString name="$parentTransposeLabel" parentKey="transposeLabel" inherits="GameFontHighlight" justifyh="LEFT">
 					<Size x="250" y="32" />
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentTranspose" x="20" />
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentTranspose" />
 					</Anchors>
 				</FontString>
 
@@ -124,7 +124,7 @@
 				<FontString name="$parentOctaveLabel" parentKey="octaveLabel" inherits="GameFontHighlight" justifyh="LEFT">
 					<Size x="250" y="32" />
 					<Anchors>
-						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentOctave" x="20" />
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="$parentOctave" />
 					</Anchors>
 				</FontString>
 
