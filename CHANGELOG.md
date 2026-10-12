@@ -1,6 +1,10 @@
 Changelog
 =========
 
+v0.5.0
+------
+* Remade dropdowns using the standard API.
+
 v0.4.0
 ------
 * Updated for WoW Retail 12.1.0.
