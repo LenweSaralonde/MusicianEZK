@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v0.6.0
+------
+* Updated for Musician 1.9.18.0.
+* WoW Forever compatibility.
+
 v0.5.0
 ------
 * Remade dropdowns using the standard API.

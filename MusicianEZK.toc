@@ -2,7 +2,7 @@
 ## Title: Musician EZK
 ## Author: LenweSaralonde
 ## Notes: Perform live music in Musician using simplified keyboard
-## Version: 0.5.0
+## Version: 0.6.0
 ## RequiredDeps: Musician
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
